@@ -1,0 +1,10 @@
+1. Add numers from a to b to using loop
+2. Add even if numbers are opposite. Use if else
+a=3,b=5
+a=5,b=3
+3. Find the factorial of a number
+4. Find the sum of factrials
+5. Check for prime numbers.
+6. Get Fibonnaci numbers
+0.1.1.2.3.5,8,13,21
+Nested loops

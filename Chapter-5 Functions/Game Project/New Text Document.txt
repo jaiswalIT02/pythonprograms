@@ -1,0 +1,42 @@
+def printBoard(board):
+        print()
+        for i in range(3):
+            ch=toChar(board[i])
+            print(ch,end="")
+        print()
+        for i in range(3,6):
+            ch=toChar(board[i])
+            print(ch,end="")
+        print()
+        for i in range(6,9):
+            ch=toChar(board[i])
+            print(ch,end="")
+        print()
+    
+def toChar(n):
+    if n==0:
+        return ' - '
+    if n==1:
+        return ' O '
+    return ' X '
+def readMove(board,player):
+    while True:
+        n=int(input("{0} move  ".format(player)))
+        if n<1 or n >9 :
+            continue
+        n=n-1
+        if board[n]!=0:
+            continue
+        return n
+print("----------Welcome to Tictactoe Game----------")
+players=[0,0]
+players[0]=str(input("Enter the 1st Player:"))
+players[1]=str(input("Enter the 2nd Player:"))
+tictactoe=[0,0,0,0,0,0,0,0,0]
+
+currentplayer=0
+while True:
+    printBoard(tictactoe)
+    move=readMove(tictactoe,players[currentplayer])
+    tictactoe[move]=currentplayer+1
+    currentplayer=1-currentplayer

@@ -1,0 +1,5 @@
+Passbook
+
+1. SNO           Transaction       Amount      Balance    AccNo
+    5             Dep              1000        1000       1001
+    9             Wid               200        800        1001
