@@ -21,7 +21,7 @@ print(dic)
 l=[1,2,3,4,5,6,6,3]
 s=set(l)
 dic=dict.fromkeys(s,0)
-#print(dic)
+print(dic)
 for item in l:
     dic[item]+=1
 print(dic)
