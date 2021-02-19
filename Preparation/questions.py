@@ -49,23 +49,6 @@ positive_nos = [num for num in list1 if num <= 0]
   
 print("positive numbers in the list: ", positive_nos)
 
-#Find the odd/even from list.
-l= [10, 21, 4, 45, 66, 93] 
-odd=[]
-for item in l:
-    if item % 2==0:
-        odd=odd+[item]
-print("odd list=",odd)
-
-#find the positive no from list
-l1= [10, -21, -4, -45, -66, 93]
-positive=[]
-for item in l1:
-    if item >= 0:
-        positive=positive+[item]
-
-print("positive list=",positive)
-
 #Remove multiple elements from list
 
 l=[3,5,7,4,8,4,3]
@@ -74,13 +57,6 @@ print("l=",l)
 """
 
 """
-l=[3,5,7,4,8,4,3]
-
-for item in l:
-    if item % 2 == 0:
-        l.remove(item)
-
-print(l)
 """
 """
 #Find the reverse of given list.
@@ -89,19 +65,8 @@ l.reverse()
 print(l)
 
 """
-#Pollyndrome/revers list both are printing
 
-l = ['1', '2', '3']
-l1=[]
-for i in l:
-    l1=[i]+l1+[i]
-print("l=",l,"l1=",l1)
 
-l=[1,2,3,4,5]
-list=[]
-sum=[]
-for i in l:
-    
 
 
 
