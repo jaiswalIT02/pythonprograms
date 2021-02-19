@@ -1,0 +1,9 @@
+1. Given the marks in 3 subjects phy, maths and chemistry find the percent and division
+also check if the student is passed.
+
+Student is passed if he is passed in all subjects. p>=40, c>=40 and m>=40
+
+1st percent>=60
+<60 and >=50 2nd
+<50 and >=40 3rd
+only passed people have division.

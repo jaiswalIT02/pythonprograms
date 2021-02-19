@@ -1,0 +1,25 @@
+1. Create
+2. Alter
+3. Drop
+4. Insert
+5. Update
+6. Delete
+7. Select 
+	Simple select, select fields, where condition, join, order by, intersect, minus, union, union all, having, group by
+8. Check, 
+9. Keys, primary, unique, foreign key,
+
+10. NF(Normal Forms)
+           1 NF,2 NF,3 NF,4 NF,5 NF
+             
+11. Project   	
+
+	Bank Project
+
+1. Open account
+2. Deposit
+3. Withdraw
+4. Lookup
+5. Khata band
+
+

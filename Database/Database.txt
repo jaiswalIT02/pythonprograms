@@ -1,0 +1,21 @@
+1.Super Key:
+	Every singal record in a table must be unique in some way . Such a combination is called super key.
+
+	Primmary key is the minimul super key.The primary key is unique but not null.
+
+2.Composite Key :
+	if the key is based on a single field, it is called simple key,otherwise it is called composite key.
+
+3.Candidate Key:
+	
+	A candidate key is a possible primary key.The primary key is the physical ordaering in the database and therefore they cannot be a unique key.
+
+4.Foreighn key:
+
+
+
+
+
+
+	
+	

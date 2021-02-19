@@ -1,0 +1,45 @@
+Join :
+it has three type 
+
+1.Natural join
+2.Left join 
+3.right join 
+4.Full Outer Join
+
+
+1.Natutral join :
+
+select * from football1 f 
+join 
+cricket1 c
+on f.player =c.player
+
+2.Left join:
+
+select * from football1 f 
+ left join 
+cricket1 c
+on f.player =c.player
+
+3.Right join:
+
+select * from football1 f 
+ right join 
+cricket1 c
+on f.player =c.player
+
+4.Full outer Join 
+select * from football1 f 
+ full outer join 
+cricket1 c
+on f.player =c.player
+
+How to join three table in one table....................
+select * from football1 f
+ full outer join 
+cricket1 c
+on f.player =c.player
+join
+kabaddi1 k
+on 
+f.player=k.player

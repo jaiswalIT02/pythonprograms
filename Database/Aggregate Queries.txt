@@ -1,0 +1,39 @@
+Aggregate Queries
+1. Max - works for numbers, dates and strings. Bigger number is greater, date in the future is greater,and letters are greater by dictionary order
+Capital is less than small letter.
+2. Min
+3. Avg finds average, works only for numerical
+4. Sum adds up all the entries. Works only for numerical data
+5. Count counts no of records. Works for all data
+
+
+
+select bdate,sysdate from (select to_date(to_char(birthdate,'dd-Mon') || to_char(sysdate,'-yyyy'),'dd-Mon-yyyy') as bdate from birthdays)
+where bdate-sysdate>0
+
+
+
+
+
+
+
+order by:
+
+select rownum,marks.*,P+C+M as total from marks order by P+C+M 
+
+
+
+select rownum,rollno,name,P,C,M,total from
+(select marks.*,P+C+M as total from marks where p>=40 and m>=40 and c>=40 order by P+C+M desc)
+where rownum<=2
+
+minus 
+
+select rownum,rollno,name,P,C,M,total from
+
+
+
+select marks.*, rowid from marks
+(select marks.*,P+C+M as total from marks where p>=40 and m>=40 and c>=40 order by P+C+M desc)
+where rownum<=1
+

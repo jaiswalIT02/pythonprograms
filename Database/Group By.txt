@@ -1,0 +1,7 @@
+Group By:
+	Agregate query work on groups of records when a non-agregate field is combined with aggregate field.
+The database will create groups on commnon values of the non-aggregate fields, then aggregate function will be calculated.
+
+Syntax:
+select name ,max(xyz) from tablename 
+group by name

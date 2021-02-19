@@ -1,0 +1,155 @@
+Q.1: Find the min priced in stationary.
+Solv: 
+	select min(rate),max(rate),p.productcategory from productcategories pc
+	join 
+	product p
+	on pc.productcategory =p.productcategory where p.productcategory='stationary'
+	group by p.productcategory
+------------------------------------------------------------------------------------------------------------------
+Q--Find the total no of product as per category:
+Solv:
+	select count(name) as count,p.productcategory from productcategories pc
+	join 
+	product p
+	on pc.productcategory =p.productcategory 
+	group by p.productcategory
+
+As per any one:
+	select count(name) as count,p.productcategory from productcategories pc
+	join 
+	product p
+	on pc.productcategory =p.productcategory where p.productcategory='colddrinks'
+	group by p.productcategory
+------------------------------------------------------------------------------------------------------------------
+Q.2: Find the max priced in coldrinks.
+Solv:  
+
+    select max(rate),p.productcategory from productcategories pc
+    join 
+    product p
+    on pc.productcategory =p.productcategory where p.productcategory='colddrinks'
+    group by p.productcategory
+
+
+--------------------------------------------------------------------------------------------------------------------
+Q.3: Find the avg priced in coldrinks.
+ho gya hai 
+-----------------------------------------------------------------------------------------------------------------
+Q.4: Find the avg rate on all category in products.
+	select avg(rate) from productcategories pc
+	join 
+	product p
+	on pc.productcategory =p.productcategory
+	order by rate
+-----------------------------------------------------------------------------------------------------------------
+
+Q.5: Find the total costs of 10 bottles of min priced coldrinks.
+
+select productcategory,min(rate),min(rate)*25 as "total cost" from product
+where productcategory='colddrinks'
+group by productcategory
+
+
+------------------------------------------------------------------------------------------------------------------
+Q.6: Find the total no(count) of products per product category.
+Solv:
+	select count(name) from productcategories,product
+	where productcategories.productcategory=product.productcategory
+	order by name
+------------------------------------------------------------------------------------------------------------------
+Q.7: Find the highest priced product per category.
+Solv:
+	select max(rate),p.productcategory from productcategories pc
+    	join 
+    	product p
+    	on pc.productcategory =p.productcategory
+    	group by p.productcategory
+ 
+-------------------------------------------------------------------------------------------------------------------
+
+Q.8: Find the tax on "Dew".
+solv:
+	
+	select name,tax from productcategories pc
+	join 
+	product p
+	on pc.productcategory =p.productcategory
+
+	where name='Dew'
+------------------------------------------------------------------------------------------------------------------
+Q.8 Find the Total no of products and their taxes.
+solv:
+
+select name,tax
+from productcategories pc
+join 
+product p
+on pc.productcategory =p.productcategory
+			or
+select name,tax from productcategories,product
+where productcategories.productcategory=product.productcategory
+------------------------------------------------------------------------------------------------------------------
+
+Q.9: All to all category
+solv:
+select max(rate),min(rate),avg(rate),count(name),p.productcategory from productcategories pc
+join 
+product p
+on pc.productcategory =p.productcategory
+group by p.productcategory
+order by 'quantity'
+where productcategory='colddrinks'
+---------------------------------------------------------------------------------------------------------------
+Without joining the table similar as same
+select * from productcategories,product
+where productcategories.productcategory=product.productcategory
+
+----------------------------------------------------------------------------------------------------------------
+Q.10 Differene between highest price and lowest price items per category.
+
+select p.productcategory,max(rate),min(rate),max(rate)-min(rate)  from productcategories pc
+join 
+product p
+on pc.productcategory =p.productcategory
+group by p.productcategory
+
+-----------------------------------------------------------------------------------------------------------------
+
+select * 
+from product
+
+select * 
+from product
+order by quantity desc
+
+
+select * 
+from product
+order by quantity
+
+
+select count(name)
+from product
+group by productcategory
+
+
+select max(quantity),min(quantity)
+from product
+
+select max(quantity),min(quantity)
+from product
+group by productcategory
+
+
+
+select count(name)
+from product
+group by tax
+
+select avg
+from product
+group by productcategory
+
+
+
+
