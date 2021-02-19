@@ -1,3 +1,4 @@
+"""
 def reverseWord(text):
     
     l=list(text)
@@ -68,6 +69,46 @@ print("positive list=",positive)
 #Remove multiple elements from list
 
 l=[3,5,7,4,8,4,3]
+l.sort()
+print("l=",l)
+"""
 
-l.remove((4),(3))
+"""
+l=[3,5,7,4,8,4,3]
+
+for item in l:
+    if item % 2 == 0:
+        l.remove(item)
+
 print(l)
+"""
+"""
+#Find the reverse of given list.
+l=[1,2,3,4]
+l.reverse()
+print(l)
+
+"""
+#Pollyndrome/revers list both are printing
+
+l = ['1', '2', '3']
+l1=[]
+for i in l:
+    l1=[i]+l1+[i]
+print("l=",l,"l1=",l1)
+
+l=[1,2,3,4,5]
+list=[]
+sum=[]
+for i in l:
+    
+
+
+
+
+
+
+
+
+
+
