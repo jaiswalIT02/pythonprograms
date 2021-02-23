@@ -1,0 +1,5 @@
+1.Make login ,logout and protected.
+2.Get username and password from login 
+3.Return username and password back to form 
+4.Check if username password correct in database.
+5.Add username to session 

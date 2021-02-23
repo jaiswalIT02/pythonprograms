@@ -1,0 +1,39 @@
+x = [4,5,6,7]
+y = [423,428,435,440]
+
+data={"poly":[x,y]}
+index=["x","y"]
+df=pd.DataFrame(data,index)
+print(df)
+df.to_excel("F:\\Excel2\\regret.xlsx")
+
+
+
+import pandas as pd
+def readexcel(excel):
+    df=pd.read_excel(excel)
+   
+    return df
+df=readexcel("F:\\Excel2\\marks.xlsx")
+print(df)
+
+
+
+
+def readexcel(excel):
+    df=pd.read_excel("F:\\Excel2\\regret.xlsx")
+    print(df)
+    polynomial=df["poly"]
+    x=polynomial[0]
+    y=polynomial[1]
+    return x,y
+x,y=readexcel("F:\\Excel2\\regret.xlsx")
+print(x,y)
+
+
+#667292
+
+<div class="firstblock"></div>
+<div class="secondblock"></div>
+<input class="staticclass" type="Text">
+<div class="animation">

@@ -1,0 +1,9 @@
+
+<title>VaranasiKshetra.com: Dedicated to the Dharmic Heritage of Varanasi. Mandirs, Ghats, Rivers, Sarovars, everything.</title>
+<meta name="Description" content="An introduction to Varanasi,written by Champak Roy, 
+ designed by Deepak Singh and Kishan Singh, all pictures are copyrighted"
+ />
+ <meta property="og:title" content="VaranasiKshetra.com: Dedicated to the Dharmic Heritage of Varanasi. Mandirs, Ghats, Rivers, Sarovars, everything." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://varanasikshetra.com/index.aspx/" />
+ <meta property="og:image" content="http://varanasikshetra.com/varanasipictures/slider/2.jpg" />

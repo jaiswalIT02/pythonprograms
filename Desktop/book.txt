@@ -1,0 +1,39 @@
+
+def inbook(request):
+	#if(not request.GET):
+	option=request.POST["option"]
+	if option=="clear":
+		data={"bookname":"","subject":"","price":""}
+		return render(request,"book.html",{'data':data})
+		
+	
+	if option=="submit":
+		bookname=request.POST["bookname"]
+		subject=request.POST["subject"]
+		price=request.POST["price"]
+		print(bookname,subject,price)
+		books=BookModel(
+		bookname=bookname,
+		subject=subject,
+		price=price
+		)
+		books.save()
+		data={"bookname":bookname,"subject":subject,"price":price}
+		return render(request,"book.html",{'data':data})
+	#else:	
+	#	bookname=request.GET["bookname"]
+	#	subject=request.GET["subject"]
+	#	price=request.GET["price"]
+	#	print(bookname,subject,price)
+	
+	#	books=BookModel(
+	#	bookname=bookname,
+	#	subject=subject,
+	#	price=price
+	#	)
+	#	books.save()
+		#data={"bookname":bookname,"subject":subject,"price":price}
+		#return render(request,"book.html",{'data':data})
+
+
+

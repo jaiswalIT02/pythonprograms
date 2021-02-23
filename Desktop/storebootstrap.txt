@@ -1,0 +1,103 @@
+ purchasequantity=request.GET["purchaseqty"]
+            query="UPDATE `stock management`.`stock` SET `qty` = '{'0'}' WHERE `stock`.`sno` = {'NULL'}".format(quantity)
+            print(query)
+            result=sqlEngine.execute(query)
+
+
+unsplash.com for image
+
+
+<input {{data.checked}} type="checkbox" name="option" id="ad"value="add">
+			  <label for="ad">Add/Sub</label>
+			 
+
+def calculate(request):
+    try:
+        print("Calculate")
+        n1=request.GET["n1"]
+        checked=""
+        n2=request.GET["n2"]
+        n1=int(n1)
+        n2=int(n2)
+        print("n1",n1,n2)
+        
+        if 'option' in request.GET:
+            option=request.GET['option']
+            checked="checked"
+        else:
+            option="sub"
+        if option=="add":
+            result=n1+n2
+        if option=="sub":
+            result=n1-n2
+        data={'result':result,'n1':n1,'n2':n2,'checked':checked}
+        return render(request,"calculate.html",{'data':data})
+    except:
+        print("Error")
+        
+        
+        result=0
+        data={'result':0,'n1':0,'n2':0,'checked':""}
+        return render(request,"calculate.html",{'data':data})
+	
+
+
+
+
+
+
+        if 'option' in request.GET:
+            option=request.GET['option']
+            notchecked='notchecked'
+        else:
+            option='result'  
+            return render(request,"calculate.html",{'data':data}) 
+            print("pls check the box")
+
+
+
+
+
+
+
+
+
+    
+def tarun(request):
+    try:
+        n1=request.GET["n1"]
+        n2=request.GET["n2"]
+        option="sub"
+        n1=int(n1)
+        n2=int(n2)
+        print("n1",n1,n2)
+        if 'option' in request.GET:
+            option=request.GET['option']
+           # checked="checked"
+        else:
+            option="sub"
+        if option=="add":
+            result=n1+n2
+        if option=="sub":
+            result=n1-n2
+        if option=="multiply":
+            result=n1*n2
+        if option=="divide":
+            result=n1/n2
+
+        checked=""
+        print('option' in request.GET)
+        if 'option' in request.GET:
+            option=request.GET['option']
+            checked="checked"
+        print(option)  
+		
+        data={'result':result,'n1':n1,'n2':n2,"checked":checked}
+        return render(request,"tarun.html",{'data':data})
+	     
+    except:
+         result=0
+         data ={'result':0,"n1":0,"n2":0,"checked":""}
+         return render(request,"tarun.html",{'data':data})
+        
+	
