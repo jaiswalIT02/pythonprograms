@@ -1,4 +1,17 @@
 
+def question(request):
+    
+    quizbank=Quiz.objects.all()
+    print(type(quizbank))
+    qno=0
+    for quiz in quizbank:
+        print(quiz.question,quiz.optA,quiz.optB,quiz.optC,quiz.optD,quiz.correctanswer)
+
+    data={"quizbank":quizbank[qno]}
+    #return HttpResponse(str(len(quizbank)))
+    return render(request,"quiz.html",{'data':data})
+
+
 def inbook(request):
 	#if(not request.GET):
 	option=request.POST["option"]

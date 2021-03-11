@@ -1,0 +1,33 @@
+Q.1---What is Python?
+1Python is High level,interpreted & oject-oriented scripting programming language
+2.Readable cod eand large library
+3.Works on all operating systems.
+
+Q.2--Featurse of Pyhton?
+Open source language,support both procedure & oject-oriented programming
+Intrepreted language,
+Dynamically-ytped,Automatic memory management,
+Interfaces to all major databases,
+Can be integrated with C,C++,COM,ActiveX,COBRA & Jva,
+and it is Portable language which is run in different plateforms
+
+
+Q.1. Tell me about yourself?
+Q.2. What is Python?Define it.
+Q.3. Python is compiler based language or intrepreted languge?
+Q.4. Python has bytecode or not ?
+Q.5. Python support data type or not ?
+Q.6. Tell the some datatypes in python? & its use.
+Q.7. Difference between set & tuple?
+Q.8. What is array in python?
+Q.9. What is object in python?
+Q.10.Python support polymorphism or not?
+Q.11.Python support constructor or not?
+Q.12.Multiple contructor can we in single class or not?
+Q.13.Magic function in python?
+Q.14.Decorator in python ?
+Q.15.Lambda operator when is use in python ?
+Q.16.Python is static method or not?
+Q.17.Can we create multiple exception block in python code?
+Q.18.API known or not?
+Q.17.
