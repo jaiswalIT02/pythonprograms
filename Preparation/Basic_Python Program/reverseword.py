@@ -1,5 +1,4 @@
 def reverseWord(text):
-    
     l=list(text)
     print(l)
     reverse=[]

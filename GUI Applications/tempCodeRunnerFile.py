@@ -1,46 +1,59 @@
+import pygame
+from pygame import mixer
 from tkinter import *
+import os
+
+def playsong():
+    currentsong=playlist.get(ACTIVE)
+    print(currentsong)
+    mixer.music.load(currentsong)
+    songstatus.set("Playing")
+    mixer.music.play()
+
+def pausesong():
+    songstatus.set("Paused")
+    mixer.music.pause()
+
+def stopsong():
+    songstatus.set("Stopped")
+    mixer.music.stop()
+
+def resumesong():
+    songstatus.set("Resuming")
+    mixer.music.unpause()    
+
 root=Tk()
-root.geometry("500x500")
-root.resizable(0,0)
+root.title('Tarun Jaiswal Music player project')
 
-x=IntVar()
-y=IntVar()
-z=IntVar()
+mixer.init()
+songstatus=StringVar()
+songstatus.set("choosing")
 
-e1=Entry(root,font=("Arial",25),textvariable=x)
-e1.pack()
-e2=Entry(root,font=("Arial",25),textvariable=y)
-e2.pack()
+#playlist---------------
 
-# Sum of two integer
-def show():
-    a=x.get()
-    b=y.get()
-    c=a+b
-    z.set(c)
+playlist=Listbox(root,selectmode=SINGLE,bg="white",fg="white",font=('Times new roman',15),width=40)
+playlist.grid(columnspan=5)
 
-def show1():
-    a=x.get()
-    b=y.get()
-    c=a-b
-    z.set(c)
+os.chdir(r'E:\pythonprograms\GUI Applications\000 Sanam Teri Kasam')
+songs=os.listdir()
 
-def show2():
-    a=x.get()
-    b=y.get()
-    c=a*b
-    z.set(c)
+for s in songs:
+    playlist.insert(END,s)
 
-b1=Button(root,text="Sum",font=("Arial",25),command=show)
-b1.pack()
+playbtn=Button(root,text="play",command=playsong)
+playbtn.config(font=('arial',10),bg="DodgerBlue2",fg="white",padx=7,pady=7)
+playbtn.grid(row=1,column=0)
 
-b2=Button(root,text="Sub",font=("Arial",25),command=show1)
-b2.pack()
+pausebtn=Button(root,text="Pause",command=pausesong)
+pausebtn.config(font=('arial',10),bg="DodgerBlue2",fg="white",padx=7,pady=7)
+pausebtn.grid(row=1,column=1)
 
-b3=Button(root,text="Multiply",font=("Arial",25),command=show2)
-b3.pack()
+stopbtn=Button(root,text="Stop",command=stopsong)
+stopbtn.config(font=('arial',10),bg="DodgerBlue2",fg="white",padx=7,pady=7)
+stopbtn.grid(row=1,column=2)
 
-e3=Entry(root,font=("Arial",25),textvariable=z)
-e3.pack()
+Resumebtn=Button(root,text="Resume",command=resumesong)
+Resumebtn.config(font=('arial',10),bg="DodgerBlue2",fg="white",padx=7,pady=7)
+Resumebtn.grid(row=1,column=3)
 
-root.mainloop()
+mainloop()
