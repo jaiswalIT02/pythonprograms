@@ -1,6 +1,6 @@
 '''
 n=0
-r=10
+r=4
 for m in range(1,r+1):
     for gap in range(1,(r-m)+1):
         print(end=" ")

@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Oct  8 10:37:29 2020
-
-@author: Tarun Jaiswal
-"""
-
 
 n=5
 x=1

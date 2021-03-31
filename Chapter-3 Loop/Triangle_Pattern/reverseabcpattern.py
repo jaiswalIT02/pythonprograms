@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Oct  8 12:03:57 2020
 
-@author: Tarun Jaiswal
-"""
 
 n=5
 x=1

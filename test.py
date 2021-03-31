@@ -65,7 +65,7 @@ for item in range(n,n+26,1):
 
 
 str1 = "Tarun"  
-x = ""  
+x = ""
 for i in str1:  
     x += i
     print(x)
@@ -125,42 +125,6 @@ print(ret)
 
 
 print("Tarun")
-n=int(input("Enter N\n"))
-l=[]
-
-for i in range(n):
-    row=[]
-    for j in range(n):
-        row=row + [0]
-    l=l+[row]
-
-
-left=0
-right=n-1
-top=0
-bottom=n-1
-count=0
-while count<n*n:
-    for i in range(left,right+1):
-        count+=1
-        l[top][i]=count
-    top+=1
-    for i in range(top,bottom+1):
-        count+=1
-        l[i][right]=count
-    right-=1
-    for i in range(right,left-1,-1):
-        count+=1
-        l[bottom][i]=count
-    bottom-=1
-    for i in range(bottom,top-1,-1):
-        count+=1
-        l[i][left]=count
-    left+=1
-for i in range(n):
-    for j in range(n):
-     print(l[i][j],end="   ")
-    print()
 
 
 def rotate(str):
@@ -220,7 +184,7 @@ str=leftrotate(str)
 print(str)
 
 """
-
+'''
 # right rotate
 str="CAT"
 l=list(str)
@@ -231,13 +195,14 @@ print(str)
 l[0]=l[1]
 l[1]=l[2]
 print(l)
-    
+
+
 def rightrotate(str):
     l=list(str)
     n=len(l)
     t=l[n-1]
     for i in range(0,n-1):
-        l[i]=l[i+1]
+        l[i]=l[i]
         
     l[0]=t
     result="".join(l)
@@ -246,6 +211,6 @@ def rightrotate(str):
 str="CAT"
 print(str)
 str=rightrotate(str)
-
-
 print(str)
+
+'''

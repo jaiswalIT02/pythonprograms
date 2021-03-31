@@ -3,7 +3,7 @@
 Created on Sat Oct  3 14:21:13 2020
 
 1,-2,3,-4....
-@author: Tarun Jaiswal
+7@author: Tarun Jaiswal
 
 """
 n=int(input("Enter the no="))

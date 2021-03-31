@@ -1,59 +1,6 @@
-import pygame
-from pygame import mixer
-from tkinter import *
-import os
 
-def playsong():
-    currentsong=playlist.get(ACTIVE)
-    print(currentsong)
-    mixer.music.load(currentsong)
-    songstatus.set("Playing")
-    mixer.music.play()
-
-def pausesong():
-    songstatus.set("Paused")
-    mixer.music.pause()
-
-def stopsong():
-    songstatus.set("Stopped")
-    mixer.music.stop()
-
-def resumesong():
-    songstatus.set("Resuming")
-    mixer.music.unpause()    
-
-root=Tk()
-root.title('Tarun Jaiswal Music player project')
-
-mixer.init()
-songstatus=StringVar()
-songstatus.set("choosing")
-
-#playlist---------------
-
-playlist=Listbox(root,selectmode=SINGLE,bg="white",fg="white",font=('Times new roman',15),width=40)
-playlist.grid(columnspan=5)
-
-os.chdir(r'E:\pythonprograms\GUI Applications\000 Sanam Teri Kasam')
-songs=os.listdir()
-
-for s in songs:
-    playlist.insert(END,s)
-
-playbtn=Button(root,text="play",command=playsong)
-playbtn.config(font=('arial',10),bg="DodgerBlue2",fg="white",padx=7,pady=7)
-playbtn.grid(row=1,column=0)
-
-pausebtn=Button(root,text="Pause",command=pausesong)
-pausebtn.config(font=('arial',10),bg="DodgerBlue2",fg="white",padx=7,pady=7)
-pausebtn.grid(row=1,column=1)
-
-stopbtn=Button(root,text="Stop",command=stopsong)
-stopbtn.config(font=('arial',10),bg="DodgerBlue2",fg="white",padx=7,pady=7)
-stopbtn.grid(row=1,column=2)
-
-Resumebtn=Button(root,text="Resume",command=resumesong)
-Resumebtn.config(font=('arial',10),bg="DodgerBlue2",fg="white",padx=7,pady=7)
-Resumebtn.grid(row=1,column=3)
-
-mainloop()
+menu_bar=Menu(compiler)
+run_bar=Menu(menu_bar)
+run_bar.add_command(label='Run')
+menu_bar.add_cascade(label='Run',menu=menu_bar)
+compiler.config(menu=menu_bar)
