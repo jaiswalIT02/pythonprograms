@@ -1,4 +1,4 @@
-manas="manas is going from varanasi to to delhi and then from delhi to chandigarh"
+manas="manas is going from varanasi to delhi and then from delhi to chandigarh"
 print(manas)
 lst=manas.split()
 print(lst)

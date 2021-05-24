@@ -21,7 +21,7 @@ class Bill_App:
         c_bill_lbl=Label(f1,text="Customer Name",fg="white",bg=bg_color,font=("times new roman",18,"bold")).grid(row=0,column=4,padx=5,pady=20)
         c_bill_txt=Entry(f1,width=15,font="arial 15",bd=7,relief=SUNKEN).grid(row=0,column=5,pady=5,padx=10)
 
-        bill_btn=Button(f1,text="search",width=10,bd=7,font="arial 12 bold ").grid(row=0,column=6,pady=10,padx=10)
+        bill_btn=Button(f1,text="Search",width=10,bd=7,font="arial 12 bold ").grid(row=0,column=6,pady=10,padx=10)
 
 
         f2=LabelFrame(self.root,bd=10,relief=GROOVE,text="Cosmetic",fg="gold",bg=bg_color,font=("times new roman",16,"bold"))
@@ -34,16 +34,13 @@ class Bill_App:
         f3=LabelFrame(self.root,bd=10,relief=GROOVE,text="Cold Drinks",fg="gold",bg=bg_color,font=("times new roman",16,"bold"))
         f3.place(x=330,y=180,width=315,height=380)
 
-
         
         f4=LabelFrame(self.root,bd=10,relief=GROOVE,text="Grocery",fg="gold",bg=bg_color,font=("times new roman",16,"bold"))
         f4.place(x=650,y=180,width=315,height=380)
 
-
         
         f5=LabelFrame(self.root,bd=10,relief=GROOVE,text="Bill",fg="gold",bg="white",font=("times new roman",16,"bold"))
         f5.place(x=950,y=180,width=400,height=380)
-
 
         
         f6=LabelFrame(self.root,bd=10,relief=GROOVE,text="Bill",fg="gold",bg=bg_color,font=("times new roman",16,"bold"))
@@ -51,3 +48,4 @@ class Bill_App:
 root=Tk()
 obj=Bill_App(root)
 root.mainloop()
+
